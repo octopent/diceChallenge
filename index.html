@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>TheDiceChallenge | Multiplayer</title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+    </head>
+    
+    <body>
+        <div class="head" align="center">
+            <div class="icon">
+                <img src="img/black-dice.jpg"/>
+            </div>
+            <p>Roll-a-Dice</p>
+        </div>
+        
+        <h1>How to play</h1>
+        <p>Welcome to <b>Roll-a-Dice - The Dice Challenge</b>. You will be playing against the computer. Your job as the player will be to roll a dice using the green button below labelled roll. Subsequently, the computer will also roll a dice. The goal is to get the number 6 before the opponent.<br><br>Good Luck!</p>
+        
+        <!--- ----------------------playing area-------------------------------------- ---> 
+        
+        <div align="center" class="playArea">
+            
+            <div class="player1">
+                <h2>PLAYER #1</h2>
+                <div class="controls">
+                    <input type="text" id="onDice" value=""><br>
+                    <button id="roll" onclick="response()">Roll Dice</button><br>
+                </div>    
+            </div>
+            
+            <div class="player1">
+                <h2>COMPUTER</h2>
+                <div class="controls">
+                    <input type="text" id="onCDice" value=""><br>
+                    <button id="cRoll" onclick="notAllowed()">Roll Dice</button><br>
+                </div>    
+            </div>
+    
+            
+        </div>
+                
+        <!--- ------------------------------------------------------------------------ ---> 
+        
+        <div class="successmsg" id="successmsg">
+            <input type="text" id="winmsg" value="">
+        </div>
+        
+       <!--- ------------------------------------------------------------------------ ---> 
+        <script>
+            let t = 0;
+            function notAllowed(){
+                alert("You cannot roll computer's dice!!!");
+            }
+            
+            function response(){
+                t++;
+                let lower = 1; 
+                let upper = 6; 
+                let myRandom = Math.floor(Math.random() * (upper - lower + 1)) + lower;
+                let cRandom = Math.floor(Math.random() * (upper - lower + 1)) + lower;
+                
+                document.getElementById("onDice").value = myRandom;
+                document.getElementById("onCDice").value = cRandom; 
+                
+                if(myRandom === 6){
+                    document.getElementById("successmsg").style.visibility = "visible";
+                    document.getElementById("winmsg").value = "Player #1 Wins! Reload page to play again."
+                    document.getElementById("cRoll").style.visibility = "hidden";
+                    document.getElementById("roll").style.visibility = "hidden";
+
+                    
+                }
+                else if(cRandom === 6){
+                    document.getElementById("successmsg").style.visibility = "visible";
+                    document.getElementById("winmsg").value = "Computer Wins! Reload page to play again."
+                    document.getElementById("cRoll").style.visibility = "hidden";
+                    document.getElementById("roll").style.visibility = "hidden";      
+                }
+            }
+        </script>
+        
+        <!--- ------------------------------------------------------------------------ ---> 
+
+    </body>
+</html>

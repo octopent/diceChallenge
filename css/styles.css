@@ -1,0 +1,98 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+h1{
+    font-size: 18px;
+    margin: 10px 30px;
+}
+
+h2{
+    margin: 0px;
+    color: #fff;
+    background-color: #c3c3c3;
+    padding: 10px 0px;
+}
+
+p{
+    margin: 0px 50px;
+}
+
+.head{
+    margin: 15px 0px 25px 0px;
+}
+.head > .icon{
+    display: inline-block;
+    text-align: center;
+}
+
+.head > .icon > img{
+    width: 50px;
+}
+
+.head > p{
+    margin: 0px;
+    display: inline-block;
+    font-size: 52px;
+    text-align: center;
+}
+
+
+.playArea >{
+    width: 100%;
+    align-items: center;
+}
+
+.playArea > .player1{
+    margin: 40px 20px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #c3c3c3;
+    width: 440px;
+}
+
+.controls{
+    display: block;
+    text-align: center;
+}
+
+.controls > button {
+    margin: 20px 0px;
+    background: green;
+    height: 60px;
+    width: 220px;
+    border-radius: 10px;
+    color: azure;
+    font-size: 24px;
+    padding: 15px 40px;
+}
+
+.controls > input{
+    margin: 20px 0px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 64px;
+    color: chartreuse;
+    border-width: 0px;  
+}
+
+.successmsg{
+    text-align: center;
+    visibility: hidden;
+    font-size: 76px;
+    color: chartreuse;
+}
+
+.successmsg > input{
+    width: 100%;
+    background: #c3c3c3;
+    display: inline-block;
+    text-align: center;
+    font-size: 38px;
+    color: red;
+    border-width: 0px;
+    
+}
